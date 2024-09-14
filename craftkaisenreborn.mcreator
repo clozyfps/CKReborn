@@ -12,20 +12,118 @@
           "src/main/java/net/mcreator/craftkaisenreborn/item/TestItem.java"
         ]
       }
+    },
+    {
+      "name": "PlayerTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisenreborn/procedures/PlayerTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "ChargeCursedEnergyStart",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "charge_cursed_energy_start",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisenreborn/procedures/ChargeCursedEnergyStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures"
+    },
+    {
+      "name": "ChargeCursedEnergyEnd",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "charge_cursed_energy_end",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisenreborn/procedures/ChargeCursedEnergyEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures"
+    },
+    {
+      "name": "ChargeCursedEnergyBind",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "charge_cursed_energy_bind",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisenreborn/network/ChargeCursedEnergyBindMessage.java"
+        ]
+      },
+      "path": "~/Keybinds"
     }
   ],
-  "variable_elements": [],
+  "variable_elements": [
+    {
+      "name": "CursedEnergy",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "MaxCursedEnergy",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    }
+  ],
   "sound_elements": [],
   "tag_elements": {},
   "tab_element_order": {},
   "language_map": {
     "en_us": {
-      "item.craftkaisenreborn.test": "Test"
+      "item.craftkaisenreborn.test": "Test",
+      "key.craftkaisenreborn.charge_cursed_energy_bind": "Charge Cursed Energy"
     }
   },
   "foldersRoot": {
     "name": "~",
-    "children": []
+    "children": [
+      {
+        "name": "Procedures",
+        "children": []
+      },
+      {
+        "name": "Keybinds",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
+      }
+    ]
   },
   "workspaceSettings": {
     "modid": "craftkaisenreborn",
