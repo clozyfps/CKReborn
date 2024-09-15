@@ -1,6 +1,6 @@
 package net.mcreator.craftkaisenreborn.procedures;
 
-import net.minecraft.world.entity.Entity;
+import net.minecraftforge.eventbus.api.Event;
 
 public class UseReverseCursedEnergyEndProcedure {
 	public static void execute(Entity entity) {

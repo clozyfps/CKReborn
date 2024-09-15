@@ -1,8 +1,6 @@
 package net.mcreator.craftkaisenreborn.procedures;
 
-import net.minecraft.world.entity.Entity;
-
-import net.mcreator.craftkaisenreborn.network.CraftkaisenrebornModVariables;
+import net.minecraftforge.eventbus.api.Event;
 
 public class BoredTestUsedProcedure {
 	public static void execute(Entity entity) {
