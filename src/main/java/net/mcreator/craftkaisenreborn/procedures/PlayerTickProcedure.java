@@ -68,9 +68,11 @@ public class PlayerTickProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 2, 1, false, false));
 			}
 			if (entity.isShiftKeyDown()) {
-				if (!(entity instanceof LivingEntity _livEnt8 && _livEnt8.hasEffect(MobEffects.MOVEMENT_SPEED))) {
+				if (!(entity instanceof LivingEntity _livEnt9 && _livEnt9.hasEffect(MobEffects.MOVEMENT_SPEED))) {
 					if ((entity.getCapability(CraftkaisenrebornModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenrebornModVariables.PlayerVariables())).CursedEnergy >= 25) {
 						{
 							double _setval = (entity.getCapability(CraftkaisenrebornModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenrebornModVariables.PlayerVariables())).CursedEnergy - 25;
