@@ -5,6 +5,45 @@
     "priority": "NORMAL",
     "components": [
       {
+        "type": "image",
+        "data": {
+          "image": "rct1.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "RCT1"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": -18,
+          "y": -11
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "rct2.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "RCT2"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": -18,
+          "y": -11
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "rctfull.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "RCTFull"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": -18,
+          "y": -11
+        }
+      },
+      {
         "type": "label",
         "data": {
           "name": "label_proc_display_cursed_energy",
@@ -36,6 +75,110 @@
           "anchorPoint": "BOTTOM_LEFT",
           "x": 7,
           "y": 211
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "cefull.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "CEFull"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": -18,
+          "y": -11
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "ce5.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Ce5"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": -18,
+          "y": -11
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "ce4.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Ce4"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": -18,
+          "y": -11
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "ce3.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Ce3"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": -18,
+          "y": -11
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "ce2.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Ce2"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": -18,
+          "y": -11
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "ce1.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Ce1"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": -18,
+          "y": -11
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "ceempty.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "CeEmpty"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": -18,
+          "y": -11
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "rctempty.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "RCTEmpty"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": -18,
+          "y": -11
         }
       }
     ],

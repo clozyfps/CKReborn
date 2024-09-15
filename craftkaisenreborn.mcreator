@@ -207,6 +207,226 @@
         "dependencies": []
       },
       "path": "~/Procedures"
+    },
+    {
+      "name": "CEFull",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ce_full",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisenreborn/procedures/CEFullProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "Ce5",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ce_5",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisenreborn/procedures/Ce5Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "Ce4",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ce_4",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisenreborn/procedures/Ce4Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "Ce3",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ce_3",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisenreborn/procedures/Ce3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "Ce2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ce_2",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisenreborn/procedures/Ce2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "Ce1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ce_1",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisenreborn/procedures/Ce1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "CeEmpty",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ce_empty",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisenreborn/procedures/CeEmptyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "RCTFull",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rct_full",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisenreborn/procedures/RCTFullProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "RCT2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rct_2",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisenreborn/procedures/RCT2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "RCT1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rct_1",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisenreborn/procedures/RCT1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "RCTEmpty",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rct_empty",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisenreborn/procedures/RCTEmptyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
     }
   ],
   "variable_elements": [
