@@ -209,66 +209,6 @@
       "path": "~/Procedures"
     },
     {
-      "name": "CEFull",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ce_full",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisenreborn/procedures/CEFullProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Procedures"
-    },
-    {
-      "name": "Ce5",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ce_5",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisenreborn/procedures/Ce5Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Procedures"
-    },
-    {
-      "name": "Ce4",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ce_4",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisenreborn/procedures/Ce4Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Procedures"
-    },
-    {
       "name": "Ce3",
       "type": "procedure",
       "compiles": true,
@@ -309,15 +249,15 @@
       "path": "~/GUI/Procedures"
     },
     {
-      "name": "Ce1",
+      "name": "CeEmpty",
       "type": "procedure",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ce_1",
+      "registry_name": "ce_empty",
       "metadata": {
         "return_type": "logic",
         "files": [
-          "src/main/java/net/mcreator/craftkaisenreborn/procedures/Ce1Procedure.java"
+          "src/main/java/net/mcreator/craftkaisenreborn/procedures/CeEmptyProcedure.java"
         ],
         "dependencies": [
           {
@@ -329,15 +269,75 @@
       "path": "~/GUI/Procedures"
     },
     {
-      "name": "CeEmpty",
+      "name": "Ce5",
       "type": "procedure",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ce_empty",
+      "registry_name": "ce_5",
       "metadata": {
         "return_type": "logic",
         "files": [
-          "src/main/java/net/mcreator/craftkaisenreborn/procedures/CeEmptyProcedure.java"
+          "src/main/java/net/mcreator/craftkaisenreborn/procedures/Ce5Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "RCTEmpty",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rct_empty",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisenreborn/procedures/RCTEmptyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "CEFull",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ce_full",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisenreborn/procedures/CEFullProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "Ce4",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ce_4",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisenreborn/procedures/Ce4Procedure.java"
         ],
         "dependencies": [
           {
@@ -369,26 +369,6 @@
       "path": "~/GUI/Procedures"
     },
     {
-      "name": "RCT2",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "rct_2",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisenreborn/procedures/RCT2Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Procedures"
-    },
-    {
       "name": "RCT1",
       "type": "procedure",
       "compiles": true,
@@ -409,15 +389,15 @@
       "path": "~/GUI/Procedures"
     },
     {
-      "name": "RCTEmpty",
+      "name": "RCT2",
       "type": "procedure",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "rct_empty",
+      "registry_name": "rct_2",
       "metadata": {
         "return_type": "logic",
         "files": [
-          "src/main/java/net/mcreator/craftkaisenreborn/procedures/RCTEmptyProcedure.java"
+          "src/main/java/net/mcreator/craftkaisenreborn/procedures/RCT2Procedure.java"
         ],
         "dependencies": [
           {
@@ -427,6 +407,108 @@
         ]
       },
       "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "Ce1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ce_1",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisenreborn/procedures/Ce1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "UseReverseCursedEnergyBind",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "use_reverse_cursed_energy_bind",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisenreborn/network/UseReverseCursedEnergyBindMessage.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "UseReverseCursedEnergyStart",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "use_reverse_cursed_energy_start",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisenreborn/procedures/UseReverseCursedEnergyStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures"
+    },
+    {
+      "name": "BoredTestUsed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bored_test_used",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisenreborn/procedures/BoredTestUsedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "UseReverseCursedEnergyEnd",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "use_reverse_cursed_energy_end",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisenreborn/procedures/UseReverseCursedEnergyEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures"
+    },
+    {
+      "name": "BoredTest",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bored_test",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftkaisenreborn/models/item/bored_test.json",
+          "src/main/java/net/mcreator/craftkaisenreborn/item/BoredTestItem.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -472,7 +554,9 @@
   "tab_element_order": {},
   "language_map": {
     "en_us": {
+      "item.craftkaisenreborn.bored_test": "Bored Test",
       "item.craftkaisenreborn.test": "Test",
+      "key.craftkaisenreborn.use_reverse_cursed_energy_bind": "Use Reverse Cursed Energy Bind",
       "key.craftkaisenreborn.charge_cursed_energy_bind": "Charge Cursed Energy",
       "key.categories.ck": "Craft Kaisen: Reborn"
     }
@@ -480,6 +564,10 @@
   "foldersRoot": {
     "name": "~",
     "children": [
+      {
+        "name": "Particles",
+        "children": []
+      },
       {
         "name": "Procedures",
         "children": []
@@ -492,10 +580,6 @@
             "children": []
           }
         ]
-      },
-      {
-        "name": "Particles",
-        "children": []
       },
       {
         "name": "GUI",

@@ -1,5 +1,7 @@
 package net.mcreator.craftkaisenreborn.procedures;
 
+import org.joml.Vector3f;
+
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
@@ -10,8 +12,11 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.util.RandomSource;
+import net.minecraft.util.Mth;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.particles.SimpleParticleType;
+import net.minecraft.core.particles.DustParticleOptions;
 
 import net.mcreator.craftkaisenreborn.network.CraftkaisenrebornModVariables;
 import net.mcreator.craftkaisenreborn.init.CraftkaisenrebornModParticleTypes;
@@ -110,6 +115,22 @@ public class PlayerTickProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+			}
+		}
+		if (entity.getPersistentData().getBoolean("usingRCT")) {
+			world.addParticle((new DustParticleOptions(new Vector3f(255 / 255.0F, 255 / 255.0F, 255 / 255.0F), (float) 0.25)), x, y, z, 0.2, 0.6, 0.2);
+			{
+				double _setval = (entity.getCapability(CraftkaisenrebornModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenrebornModVariables.PlayerVariables())).ReverseCursedEnergy - 1;
+				entity.getCapability(CraftkaisenrebornModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.ReverseCursedEnergy = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			entity.getPersistentData().putDouble("ticksRCTUsed", (entity.getPersistentData().getDouble("ticksRCTUsed") + 1));
+			if (entity.getPersistentData().getDouble("ticksRCTUsed") == 30) {
+				if (entity instanceof LivingEntity _entity)
+					_entity.setHealth((float) ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) + 1));
+				entity.getPersistentData().putDouble("ticksRCTUsed", (Mth.nextInt(RandomSource.create(), 0, 10)));
 			}
 		}
 	}

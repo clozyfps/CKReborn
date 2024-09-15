@@ -1,8 +1,6 @@
 package net.mcreator.craftkaisenreborn.procedures;
 
-import net.minecraft.world.entity.Entity;
-
-import net.mcreator.craftkaisenreborn.network.CraftkaisenrebornModVariables;
+import net.minecraftforge.eventbus.api.Event;
 
 public class RCT2Procedure {
 	public static boolean execute(Entity entity) {
