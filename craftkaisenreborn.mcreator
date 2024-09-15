@@ -207,6 +207,88 @@
         "dependencies": []
       },
       "path": "~/Procedures"
+    },
+    {
+      "name": "UseReverseCursedEnergyStart",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "use_reverse_cursed_energy_start",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisenreborn/procedures/UseReverseCursedEnergyStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures"
+    },
+    {
+      "name": "UseReverseCursedEnergyBind",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "use_reverse_cursed_energy_bind",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisenreborn/network/UseReverseCursedEnergyBindMessage.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "UseReverseCursedEnergyEnd",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "use_reverse_cursed_energy_end",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisenreborn/procedures/UseReverseCursedEnergyEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures"
+    },
+    {
+      "name": "BoredTestUsed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bored_test_used",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisenreborn/procedures/BoredTestUsedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BoredTest",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bored_test",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisenreborn/item/BoredTestItem.java",
+          "src/main/resources/assets/craftkaisenreborn/models/item/bored_test.json"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -252,7 +334,9 @@
   "tab_element_order": {},
   "language_map": {
     "en_us": {
+      "item.craftkaisenreborn.bored_test": "Bored Test",
       "item.craftkaisenreborn.test": "Test",
+      "key.craftkaisenreborn.use_reverse_cursed_energy_bind": "Use Reverse Cursed Energy Bind",
       "key.craftkaisenreborn.charge_cursed_energy_bind": "Charge Cursed Energy",
       "key.categories.ck": "Craft Kaisen: Reborn"
     }

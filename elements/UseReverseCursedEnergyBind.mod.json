@@ -1,0 +1,15 @@
+{
+  "_fv": 66,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "G",
+    "keyBindingName": "Use Reverse Cursed Energy Bind",
+    "keyBindingCategoryKey": "ck",
+    "onKeyPressed": {
+      "name": "UseReverseCursedEnergyStart"
+    },
+    "onKeyReleased": {
+      "name": "UseReverseCursedEnergyEnd"
+    }
+  }
+}

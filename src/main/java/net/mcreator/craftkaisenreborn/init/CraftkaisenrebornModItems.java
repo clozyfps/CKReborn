@@ -11,11 +11,13 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraft.world.item.Item;
 
 import net.mcreator.craftkaisenreborn.item.TestItem;
+import net.mcreator.craftkaisenreborn.item.BoredTestItem;
 import net.mcreator.craftkaisenreborn.CraftkaisenrebornMod;
 
 public class CraftkaisenrebornModItems {
 	public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, CraftkaisenrebornMod.MODID);
 	public static final RegistryObject<Item> TEST = REGISTRY.register("test", () -> new TestItem());
+	public static final RegistryObject<Item> BORED_TEST = REGISTRY.register("bored_test", () -> new BoredTestItem());
 	// Start of user code block custom items
 	// End of user code block custom items
 }
