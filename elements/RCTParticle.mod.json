@@ -2,7 +2,7 @@
   "_fv": 66,
   "_type": "particle",
   "definition": {
-    "texture": "burstce",
+    "texture": "rct",
     "animate": false,
     "frameDuration": 1,
     "width": 0.2,
@@ -11,7 +11,7 @@
       "fixedValue": 1.5999999999999999
     },
     "speedFactor": 1.0,
-    "gravity": -0.7,
+    "gravity": -0.5,
     "maxAge": 10,
     "maxAgeDiff": 5,
     "angularVelocity": 0.0,

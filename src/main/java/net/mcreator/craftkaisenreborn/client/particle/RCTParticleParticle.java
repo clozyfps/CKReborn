@@ -13,27 +13,27 @@ import net.minecraft.client.particle.Particle;
 import net.minecraft.client.multiplayer.ClientLevel;
 
 @OnlyIn(Dist.CLIENT)
-public class CEParticleParticle extends TextureSheetParticle {
-	public static CEParticleParticleProvider provider(SpriteSet spriteSet) {
-		return new CEParticleParticleProvider(spriteSet);
+public class RCTParticleParticle extends TextureSheetParticle {
+	public static RCTParticleParticleProvider provider(SpriteSet spriteSet) {
+		return new RCTParticleParticleProvider(spriteSet);
 	}
 
-	public static class CEParticleParticleProvider implements ParticleProvider<SimpleParticleType> {
+	public static class RCTParticleParticleProvider implements ParticleProvider<SimpleParticleType> {
 		private final SpriteSet spriteSet;
 
-		public CEParticleParticleProvider(SpriteSet spriteSet) {
+		public RCTParticleParticleProvider(SpriteSet spriteSet) {
 			this.spriteSet = spriteSet;
 		}
 
 		public Particle createParticle(SimpleParticleType typeIn, ClientLevel worldIn, double x, double y, double z, double xSpeed, double ySpeed, double zSpeed) {
-			CEParticleParticle particle = new CEParticleParticle(worldIn, x, y, z, xSpeed, ySpeed, zSpeed, this.spriteSet);
+			RCTParticleParticle particle = new RCTParticleParticle(worldIn, x, y, z, xSpeed, ySpeed, zSpeed, this.spriteSet);
 			return particle;
 		}
 	}
 
 	private final SpriteSet spriteSet;
 
-	protected CEParticleParticle(ClientLevel world, double x, double y, double z, double vx, double vy, double vz, SpriteSet spriteSet) {
+	protected RCTParticleParticle(ClientLevel world, double x, double y, double z, double vx, double vy, double vz, SpriteSet spriteSet) {
 		super(world, x, y, z);
 		this.spriteSet = spriteSet;
 		this.setSize(0.2f, 0.2f);

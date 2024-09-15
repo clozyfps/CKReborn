@@ -38,7 +38,7 @@ public class BurstCEParticleParticle extends TextureSheetParticle {
 		this.spriteSet = spriteSet;
 		this.setSize(0.2f, 0.2f);
 		this.quadSize *= 1.6f;
-		this.lifetime = (int) Math.max(1, 20 + (this.random.nextInt(10) - 5));
+		this.lifetime = (int) Math.max(1, 10 + (this.random.nextInt(10) - 5));
 		this.gravity = -0.7f;
 		this.hasPhysics = true;
 		this.xd = vx * 1;
