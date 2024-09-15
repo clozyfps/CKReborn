@@ -20,6 +20,23 @@
           "x": 7,
           "y": 223
         }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_display_reverse_cursed_ener",
+          "text": {
+            "fixedValue": "",
+            "name": "DisplayReverseCursedEnergy"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 7,
+          "y": 211
+        }
       }
     ],
     "baseTexture": "",

@@ -9,6 +9,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.mcreator.craftkaisenreborn.client.particle.RCTParticleParticle;
 import net.mcreator.craftkaisenreborn.client.particle.CEParticleParticle;
 import net.mcreator.craftkaisenreborn.client.particle.BurstCEParticleParticle;
 
@@ -18,5 +19,6 @@ public class CraftkaisenrebornModParticles {
 	public static void registerParticles(RegisterParticleProvidersEvent event) {
 		event.registerSpriteSet(CraftkaisenrebornModParticleTypes.CE_PARTICLE.get(), CEParticleParticle::provider);
 		event.registerSpriteSet(CraftkaisenrebornModParticleTypes.BURST_CE_PARTICLE.get(), BurstCEParticleParticle::provider);
+		event.registerSpriteSet(CraftkaisenrebornModParticleTypes.RCT_PARTICLE.get(), RCTParticleParticle::provider);
 	}
 }

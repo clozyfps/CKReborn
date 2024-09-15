@@ -6,6 +6,11 @@ public class ChargeCursedEnergyEndProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
-		entity.getPersistentData().putBoolean("chargingCE", false);
+		if (!entity.getPersistentData().getBoolean("chargingRCT")) {
+			entity.getPersistentData().putBoolean("chargingCE", false);
+			entity.getPersistentData().putDouble("timerCharge", 30);
+		} else {
+			entity.getPersistentData().putBoolean("chargingRCT", false);
+		}
 	}
 }

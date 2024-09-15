@@ -13,6 +13,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.client.Minecraft;
 
+import net.mcreator.craftkaisenreborn.procedures.DisplayReverseCursedEnergyProcedure;
 import net.mcreator.craftkaisenreborn.procedures.DisplayCursedEnergyProcedure;
 
 @Mod.EventBusSubscriber({Dist.CLIENT})
@@ -36,6 +37,9 @@ public class HUDOverlay {
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
 					DisplayCursedEnergyProcedure.execute(entity), 7, h - 17, -16724788, false);
+			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
+
+					DisplayReverseCursedEnergyProcedure.execute(entity), 7, h - 29, -1, false);
 		}
 	}
 }

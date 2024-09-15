@@ -159,6 +159,40 @@
         ]
       },
       "path": "~/Particles"
+    },
+    {
+      "name": "RCTParticle",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rct_particle",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisenreborn/client/particle/RCTParticleParticle.java",
+          "src/main/resources/assets/craftkaisenreborn/particles/rct_particle.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "DisplayReverseCursedEnergy",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_reverse_cursed_energy",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisenreborn/procedures/DisplayReverseCursedEnergyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
     }
   ],
   "variable_elements": [
@@ -173,6 +207,24 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "50.0"
+    },
+    {
+      "name": "RCTUnlocked",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "ReverseCursedEnergy",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "ReverseCursedEnergyMax",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "25.0"
     },
     {
       "name": "SelectedAbility",

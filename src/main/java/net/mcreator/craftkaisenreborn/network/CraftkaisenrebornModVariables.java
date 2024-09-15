@@ -77,9 +77,12 @@ public class CraftkaisenrebornModVariables {
 			PlayerVariables original = ((PlayerVariables) event.getOriginal().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			clone.MaxCursedEnergy = original.MaxCursedEnergy;
+			clone.RCTUnlocked = original.RCTUnlocked;
+			clone.ReverseCursedEnergyMax = original.ReverseCursedEnergyMax;
 			clone.SelectedAbility = original.SelectedAbility;
 			if (!event.isWasDeath()) {
 				clone.CursedEnergy = original.CursedEnergy;
+				clone.ReverseCursedEnergy = original.ReverseCursedEnergy;
 			}
 			if (!event.getEntity().level().isClientSide()) {
 				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
@@ -122,6 +125,9 @@ public class CraftkaisenrebornModVariables {
 	public static class PlayerVariables {
 		public double CursedEnergy = 0.0;
 		public double MaxCursedEnergy = 50.0;
+		public boolean RCTUnlocked = false;
+		public double ReverseCursedEnergy = 0;
+		public double ReverseCursedEnergyMax = 25.0;
 		public String SelectedAbility = "";
 
 		public void syncPlayerVariables(Entity entity) {
@@ -133,6 +139,9 @@ public class CraftkaisenrebornModVariables {
 			CompoundTag nbt = new CompoundTag();
 			nbt.putDouble("CursedEnergy", CursedEnergy);
 			nbt.putDouble("MaxCursedEnergy", MaxCursedEnergy);
+			nbt.putBoolean("RCTUnlocked", RCTUnlocked);
+			nbt.putDouble("ReverseCursedEnergy", ReverseCursedEnergy);
+			nbt.putDouble("ReverseCursedEnergyMax", ReverseCursedEnergyMax);
 			nbt.putString("SelectedAbility", SelectedAbility);
 			return nbt;
 		}
@@ -141,6 +150,9 @@ public class CraftkaisenrebornModVariables {
 			CompoundTag nbt = (CompoundTag) Tag;
 			CursedEnergy = nbt.getDouble("CursedEnergy");
 			MaxCursedEnergy = nbt.getDouble("MaxCursedEnergy");
+			RCTUnlocked = nbt.getBoolean("RCTUnlocked");
+			ReverseCursedEnergy = nbt.getDouble("ReverseCursedEnergy");
+			ReverseCursedEnergyMax = nbt.getDouble("ReverseCursedEnergyMax");
 			SelectedAbility = nbt.getString("SelectedAbility");
 		}
 	}
@@ -177,6 +189,9 @@ public class CraftkaisenrebornModVariables {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.level().getEntity(message.target).getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 					variables.CursedEnergy = message.data.CursedEnergy;
 					variables.MaxCursedEnergy = message.data.MaxCursedEnergy;
+					variables.RCTUnlocked = message.data.RCTUnlocked;
+					variables.ReverseCursedEnergy = message.data.ReverseCursedEnergy;
+					variables.ReverseCursedEnergyMax = message.data.ReverseCursedEnergyMax;
 					variables.SelectedAbility = message.data.SelectedAbility;
 				}
 			});

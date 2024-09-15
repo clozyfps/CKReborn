@@ -44,7 +44,10 @@ public class PlayerTickProcedure {
 				});
 			}
 		}
-		if (entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(MobEffects.MOVEMENT_SPEED)) {
+		if (entity.getPersistentData().getDouble("timerCharge") > 0) {
+			entity.getPersistentData().putDouble("timerCharge", (entity.getPersistentData().getDouble("timerCharge") - 1));
+		}
+		if (entity instanceof LivingEntity _livEnt3 && _livEnt3.hasEffect(MobEffects.MOVEMENT_SPEED)) {
 			entity.setMaxUpStep((float) 1.2);
 		} else {
 			entity.setMaxUpStep((float) 0.6);
@@ -72,7 +75,7 @@ public class PlayerTickProcedure {
 					_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 2, 1, false, false));
 			}
 			if (entity.isShiftKeyDown()) {
-				if (!(entity instanceof LivingEntity _livEnt9 && _livEnt9.hasEffect(MobEffects.MOVEMENT_SPEED))) {
+				if (!(entity instanceof LivingEntity _livEnt12 && _livEnt12.hasEffect(MobEffects.MOVEMENT_SPEED))) {
 					if ((entity.getCapability(CraftkaisenrebornModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenrebornModVariables.PlayerVariables())).CursedEnergy >= 25) {
 						{
 							double _setval = (entity.getCapability(CraftkaisenrebornModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenrebornModVariables.PlayerVariables())).CursedEnergy - 25;
@@ -84,6 +87,28 @@ public class PlayerTickProcedure {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 							_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 1200, 2, false, false));
 					}
+				}
+			}
+		}
+		if (entity.getPersistentData().getBoolean("chargingRCT")) {
+			if (world instanceof ServerLevel _level)
+				_level.sendParticles((SimpleParticleType) (CraftkaisenrebornModParticleTypes.RCT_PARTICLE.get()), x, y, z, 6, 0, 0, 0, 0.05);
+			if ((entity.getCapability(CraftkaisenrebornModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenrebornModVariables.PlayerVariables())).CursedEnergy >= 2
+					&& (entity.getCapability(CraftkaisenrebornModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenrebornModVariables.PlayerVariables())).ReverseCursedEnergy < (entity
+							.getCapability(CraftkaisenrebornModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenrebornModVariables.PlayerVariables())).ReverseCursedEnergyMax) {
+				{
+					double _setval = (entity.getCapability(CraftkaisenrebornModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenrebornModVariables.PlayerVariables())).CursedEnergy - 2;
+					entity.getCapability(CraftkaisenrebornModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.CursedEnergy = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenrebornModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenrebornModVariables.PlayerVariables())).ReverseCursedEnergy + 1;
+					entity.getCapability(CraftkaisenrebornModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.ReverseCursedEnergy = _setval;
+						capability.syncPlayerVariables(entity);
+					});
 				}
 			}
 		}
