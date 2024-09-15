@@ -17,6 +17,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
+import net.mcreator.craftkaisenreborn.init.CraftkaisenrebornModParticleTypes;
 import net.mcreator.craftkaisenreborn.init.CraftkaisenrebornModItems;
 
 import java.util.function.Supplier;
@@ -40,6 +41,8 @@ public class CraftkaisenrebornMod {
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
 		CraftkaisenrebornModItems.REGISTRY.register(bus);
+
+		CraftkaisenrebornModParticleTypes.REGISTRY.register(bus);
 
 		// Start of user code block mod init
 		// End of user code block mod init

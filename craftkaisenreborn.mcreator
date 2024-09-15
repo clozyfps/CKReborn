@@ -27,6 +27,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -82,6 +98,67 @@
         ]
       },
       "path": "~/Keybinds"
+    },
+    {
+      "name": "CEParticle",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ce_particle",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisenreborn/client/particle/CEParticleParticle.java",
+          "src/main/resources/assets/craftkaisenreborn/particles/ce_particle.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "DisplayCursedEnergy",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_cursed_energy",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisenreborn/procedures/DisplayCursedEnergyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "HUD",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hud",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisenreborn/client/screens/HUDOverlay.java"
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
+      "name": "BurstCEParticle",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "burst_ce_particle",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisenreborn/client/particle/BurstCEParticleParticle.java",
+          "src/main/resources/assets/craftkaisenreborn/particles/burst_ce_particle.json"
+        ]
+      },
+      "path": "~/Particles"
     }
   ],
   "variable_elements": [
@@ -89,13 +166,19 @@
       "name": "CursedEnergy",
       "type": "number",
       "scope": "player_lifetime",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "MaxCursedEnergy",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "50.0"
+    },
+    {
+      "name": "SelectedAbility",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
     }
   ],
   "sound_elements": [],
@@ -104,7 +187,8 @@
   "language_map": {
     "en_us": {
       "item.craftkaisenreborn.test": "Test",
-      "key.craftkaisenreborn.charge_cursed_energy_bind": "Charge Cursed Energy"
+      "key.craftkaisenreborn.charge_cursed_energy_bind": "Charge Cursed Energy",
+      "key.categories.ck": "Craft Kaisen: Reborn"
     }
   },
   "foldersRoot": {
@@ -116,6 +200,19 @@
       },
       {
         "name": "Keybinds",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Particles",
+        "children": []
+      },
+      {
+        "name": "GUI",
         "children": [
           {
             "name": "Procedures",

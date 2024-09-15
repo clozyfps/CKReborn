@@ -77,6 +77,7 @@ public class CraftkaisenrebornModVariables {
 			PlayerVariables original = ((PlayerVariables) event.getOriginal().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			clone.MaxCursedEnergy = original.MaxCursedEnergy;
+			clone.SelectedAbility = original.SelectedAbility;
 			if (!event.isWasDeath()) {
 				clone.CursedEnergy = original.CursedEnergy;
 			}
@@ -119,8 +120,9 @@ public class CraftkaisenrebornModVariables {
 	}
 
 	public static class PlayerVariables {
-		public double CursedEnergy = 0;
-		public double MaxCursedEnergy = 0;
+		public double CursedEnergy = 0.0;
+		public double MaxCursedEnergy = 50.0;
+		public String SelectedAbility = "";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -131,6 +133,7 @@ public class CraftkaisenrebornModVariables {
 			CompoundTag nbt = new CompoundTag();
 			nbt.putDouble("CursedEnergy", CursedEnergy);
 			nbt.putDouble("MaxCursedEnergy", MaxCursedEnergy);
+			nbt.putString("SelectedAbility", SelectedAbility);
 			return nbt;
 		}
 
@@ -138,6 +141,7 @@ public class CraftkaisenrebornModVariables {
 			CompoundTag nbt = (CompoundTag) Tag;
 			CursedEnergy = nbt.getDouble("CursedEnergy");
 			MaxCursedEnergy = nbt.getDouble("MaxCursedEnergy");
+			SelectedAbility = nbt.getString("SelectedAbility");
 		}
 	}
 
@@ -173,6 +177,7 @@ public class CraftkaisenrebornModVariables {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.level().getEntity(message.target).getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 					variables.CursedEnergy = message.data.CursedEnergy;
 					variables.MaxCursedEnergy = message.data.MaxCursedEnergy;
+					variables.SelectedAbility = message.data.SelectedAbility;
 				}
 			});
 			context.setPacketHandled(true);
