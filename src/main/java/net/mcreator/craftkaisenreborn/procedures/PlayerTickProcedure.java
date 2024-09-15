@@ -1,7 +1,5 @@
 package net.mcreator.craftkaisenreborn.procedures;
 
-import org.joml.Vector3f;
-
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
@@ -16,7 +14,8 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.particles.SimpleParticleType;
-import net.minecraft.core.particles.DustParticleOptions;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.CommandSource;
 
 import net.mcreator.craftkaisenreborn.network.CraftkaisenrebornModVariables;
 import net.mcreator.craftkaisenreborn.init.CraftkaisenrebornModParticleTypes;
@@ -118,7 +117,13 @@ public class PlayerTickProcedure {
 			}
 		}
 		if (entity.getPersistentData().getBoolean("usingRCT")) {
-			world.addParticle((new DustParticleOptions(new Vector3f(255 / 255.0F, 255 / 255.0F, 255 / 255.0F), (float) 0.25)), x, y, z, 0.2, 0.6, 0.2);
+			{
+				Entity _ent = entity;
+				if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+					_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
+							_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "particle dust{color:[1.0,1.0,1.0],scale:\".25\"} ~ ~1 ~ .2 .6 .2 0 3 force");
+				}
+			}
 			{
 				double _setval = (entity.getCapability(CraftkaisenrebornModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenrebornModVariables.PlayerVariables())).ReverseCursedEnergy - 1;
 				entity.getCapability(CraftkaisenrebornModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
