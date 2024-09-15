@@ -80,7 +80,7 @@ public class PlayerTickProcedure {
 							});
 						}
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-							_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 1200, 2, false, true));
+							_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 1200, 2, false, false));
 					}
 				}
 			}
